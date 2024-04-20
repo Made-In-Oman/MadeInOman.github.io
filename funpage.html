@@ -238,16 +238,16 @@
         <script>
             function change(){
                 var list1=["A","B","C","D","E","F","G","H","I"]
-                for (var i of list1){
+                for (var i of list1){ //chose the image from the user and swap the image 
                     var val= document.getElementById(i+"s").value;
-                    document.getElementById(i).src=val+".png";
+                    document.getElementById(i).src=val+".png"; //chnage the image
                 }
 
             }
-            function tryAgain(){
+            function tryAgain(){ // reset all image to let user try again
                 var list1=["A","B","C","D","E","F","G","H","I"]
                 for (var i of list1){
-                    document.getElementById(i).src=i+".jpg";
+                    document.getElementById(i).src=i+".jpg"; //chnage the image 
                 }
             }
         </script>
