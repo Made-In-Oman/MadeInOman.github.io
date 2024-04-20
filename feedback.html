@@ -6,6 +6,21 @@
     <title>Questionnaire Form</title>
     <style>
         /* CSS for styling the form */
+        h1 { font-family: Georgia, Times, 'Times New Roman', serif;
+            font-style:italic;
+            font-weight: bolder;}
+        #BColorG{
+        background-color: #267C0B;
+        }
+        #BColorR{
+        background-color: #AF2910;
+        }
+        #fontColorR{
+        color: #AF2910;
+      }
+      #fontColorG{
+        color:  #267C0B;
+      }
         body {
             font-family: Arial, sans-serif;
             background-color: #28a745;
@@ -52,7 +67,46 @@
     </style>
 </head>
 <body>
-
+<div class="p-5  text-white text-center  border" id="BColorR">
+            <h1>Profile</h1>
+        </div>
+        <nav class="navbar navbar-expand-sm  navbar-dark border" id="BColorG" >
+            <div class="container-fluid">
+                <a class="navbar-brand " href="index.html" ><img src="logo.png" width="50em" class="rounded-circle"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link " href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="products.html">Products</a>
+                  </li>
+                <li class="nav-item">
+                <a class="nav-link" href="funpage.html">Fun Page</a>
+            </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="profile.html">Profile</a>
+                  </li>
+                 </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="feedback.html">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="calculator.html">Calculator</a>
+        </li>
+              </ul>
+            </div>
+            </div>
+          </nav>
 <form id="questionnaireForm" action="#" method="post">
     <h2>Customer Feedback Questionnaire</h2>
     <label for="name">Name:</label>
