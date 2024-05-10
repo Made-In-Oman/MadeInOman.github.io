@@ -8,7 +8,7 @@ if(isset($_GET['search'])) {
 
     // Prepare and execute SQL query to fetch records based on search criteria
     $sql = "SELECT * FROM product WHERE pname LIKE '%$search%'";
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 
     // Display the matching records
     while($row = mysqli_fetch_assoc($result)) {
@@ -24,3 +24,4 @@ if(isset($_GET['search'])) {
     mysqli_close($conn);
 }
 ?>
+

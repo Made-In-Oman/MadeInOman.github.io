@@ -58,34 +58,7 @@
         <input type="text" id="search" name="search"><br><br>
         <input type="submit" value="Search">
     </form>
-
-    <?php
-    // Display search results here if any
-    if(isset($_GET['search'])) {
-        $search = $_GET['search'];
-        include 'db_connection.php'; // Include your database connection file
-
-        // Prepare and execute SQL query to fetch records based on search criteria
-        $sql = "SELECT * FROM product WHERE pname LIKE '%$search%'";
-        $result = mysqli_query($conn, $sql);
-
-        // Display the matching records
-        echo "<h2>Search Results</h2>";
-        echo "Showing search results for: <strong>$search</strong><br><br>";
-
-        while($row = mysqli_fetch_assoc($result)) {
-            echo "<div class='product'>";
-            echo "<h3>{$row['pname']}</h3>";
-            echo "<div class='price' id='fontColorR'>{$row['price']} OR</div>";
-            echo "<div class='seller'>{$row['seller']}</div>";
-            echo "<div class='category'>Category: {$row['category']}</div>";
-            echo "</div>";
-        }
-
-        // Close database connection
-        mysqli_close($conn);
-    }
-    ?>
+ 
 
 </div>
 

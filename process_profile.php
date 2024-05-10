@@ -1,4 +1,7 @@
 <?php
+
+include  "db_connection.php";
+
 // Define a class to maintain information about one row in the specified table
 class UserProfile {
     public $name;
@@ -21,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $password = $_POST["password"];
+    $sql = "insert into customer (cname, email, pno, pass_word) values ('$name', '$email', '$phone','$password');";
+    $result = $conn->query($sql);
 
     // Create an instance of UserProfile
     $userProfile = new UserProfile($name, $email, $phone, $password);
@@ -34,4 +39,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<tr><th>Password</th><th>".$userProfile->password."</th></tr>";
         echo "</table>";
 }
+
 ?>
